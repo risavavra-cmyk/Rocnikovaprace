@@ -33,3 +33,28 @@ body{
     background-color: orange;
     cursor: pointer;
 }
+.fa-basket-shopping{
+    margin-right: 5px
+}
+.sidemenu{
+    height: 79%;
+    width: 15%;
+    float: left;
+    background-color: #cfcfcf;
+    z-index: 2;
+    font-size: 14px;
+}
+.sidemenu a{
+    background-color: orange;
+    border-color: orange;
+}
+@media only screen and (max-width: 980px) {
+    .sidemenu{
+        width: 34%;
+        z-index: 20;
+        top: 133px;
+        position: fixed;
+        font-size: 12px;
+        background: #f1f3f4;
+    }
+}
