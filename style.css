@@ -58,3 +58,18 @@ body{
         background: #f1f3f4;
     }
 }
+.slider{
+    width: 85%;
+    margin-left: 15%;
+    padding: 0 10px;
+}
+.carousel{
+    box-shadow: 1px 1px 4px 1px rgba(0,0,0,0.5);
+}
+@media only screen and (max-width: 980px) {
+    .slider{
+        width: 66%;
+        margin-left: 34%;
+        padding: 0 10px;
+    }
+}
