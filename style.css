@@ -109,3 +109,42 @@ body{
     
     margin-left: 170px;
 }
+
+.product-top img{
+    width: 100%;
+    cursor: pointer;
+}
+.product-top{
+    position: relative;
+}
+.overlay-right{
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 10%;
+    margin-left: 0;
+    width: 70px;
+}
+
+.overlay-right .fa-solid{
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #000;
+    height: 35px;
+    width: 35px;
+    font-size: 20px;
+    padding: 7px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.overlay-right .btn-secondary{
+    background: none !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+.product-top:hover .overlay-right{
+    opacity: 1;
+    transition: 0.5s;
+    margin-left: 4%;
+}
