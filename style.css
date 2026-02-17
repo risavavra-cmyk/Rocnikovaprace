@@ -18,6 +18,9 @@ body{
 .fa-search{
     color: #fff;
 }
+.nav-centrovani{
+    margin-top: -5px;
+}
 .menu-bar{
     width: 40%;
     height: 57px;
