@@ -40,30 +40,59 @@
         </div>
     </nav>
     <section>
-        <div class="list-group sidemenu">
-            <a href="index.html" class="list-group-item list-group-item-action active" aria-current="true">Úvod</a>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Motorky<i class="fa fa-angle-right"></i></a>
-            <ul>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 50cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 125cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 500cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 1000cc</li>
-            </ul>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Skútry<i class="fa fa-angle-right"></i></a>
-            <ul>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 50cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 125cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 500cc</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">do 900cc</li>
-            </ul>
-            <a href="#" class="list-group-item list-group-item-action list-group-item-warning">Helmy<i class="fa fa-angle-right"></i></a>
-            <ul>
-                <li class="list-group-item list-group-item-action list-group-item-warning">submenu</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">submenu</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">submenu</li>
-                <li class="list-group-item list-group-item-action list-group-item-warning">submenu</li>
-            </ul>
-        </div>
+        <div class="flex-shrink-0 p-3" style="width: 280px;"> 
+            <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"> 
+                <i class="fa-solid fa-bars me-2"></i> 
+                <span class="fs-5 fw-semibold">Menu</span> 
+            </a> 
+            <ul class="list-unstyled ps-0"> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">Motorky</button> 
+                    <div class="collapse show" id="home-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li>  
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">Skútry</button> 
+                    <div class="collapse" id="dashboard-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li> 
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">Helmy</button> 
+                    <div class="collapse" id="orders-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">S</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">M</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">L</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">XL</a></li> 
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="border-top my-3"></li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="true">Account</button> 
+                    <div class="collapse show" id="account-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</a></li> 
+                        </ul> 
+                    </div> 
+                </li> 
+            </ul> 
+        </div> 
         <div class="slider">
             <div id="slider" class="carousel slide carousel-fade">
                 <div class="carousel-inner">
