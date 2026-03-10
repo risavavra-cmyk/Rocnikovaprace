@@ -61,9 +61,11 @@ body{
         background: #f1f3f4;
     }
 }
+.main-section{
+    display: flex;
+}
 .slider{
-    width: 85%;
-    margin-left: 15%;
+    flex: 1;
     padding: 0 10px;
 }
 .carousel{
@@ -73,9 +75,11 @@ body{
     z-index: 1 !important;
 }
 @media only screen and (max-width: 980px) {
+    .main-section{
+        display: block;
+    }
     .slider{
-        width: 66%;
-        margin-left: 34%;
+        flex: 1;
         padding: 0 10px;
     }
 }
