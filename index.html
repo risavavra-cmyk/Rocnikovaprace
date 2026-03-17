@@ -28,12 +28,6 @@
                         <li class="nav-item">
                             <a class="nav-link active nav-centrovani" aria-current="košik" href="kosik.html"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-centrovani" href="#" aria="Zaregistrovat">Zaregistrovat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link nav-centrovani" href="#" aria="Přihlásit">Přihlásit</a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -43,13 +37,12 @@
     <section class="main-section">
         <div class="flex-shrink-0 p-3" style="width: 280px;"> 
             <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"> 
-                <i class="fa-solid fa-bars me-2"></i> 
-                <span class="fs-5 fw-semibold">Menu</span> 
+                <span class="fs-5 fw-semibold centrovani">Menu</span> 
             </a> 
             <ul class="list-unstyled ps-0"> 
                 <li class="mb-1"> 
-                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">Motorky</button> 
-                    <div class="collapse show" id="home-collapse"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">Motorky</button> 
+                    <div class="collapse" id="home-collapse"> 
                         <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
                             <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
                             <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
@@ -81,6 +74,17 @@
                     </div> 
                 </li> 
                 <li class="border-top my-3"></li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ucet-collapse" aria-expanded="false"><b>Váš účet</button> 
+                    <div class="collapse" id="ucet-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Přihlásit se</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Registrovat se</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Můj profil</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Moje objednávky</a></li>  
+                        </ul> 
+                    </div> 
+                </li> 
             </ul> 
         </div> 
         <div class="slider">
