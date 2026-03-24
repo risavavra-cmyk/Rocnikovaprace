@@ -11,76 +11,77 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html"><img src="images/ikonamoto.png" alt="Ikona" class="logo" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <form class="d-flex w-50" role="search">
+            <div class="navbar-content">
+                <form class="d-flex" role="search">
                     <input class="form-control border border-warning rounded-start-pill" type="search" placeholder="Hledat..." aria-label="Hledat"/>
                     <span class="input-group-text bg-warning rounded-end-circle" id="addon-wrapping"><i class="fa fa-search"></i></span>
                 </form>
                 <div class="menu-bar d-flex justify-content-end ms-auto">
                     <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="košik" href="#"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria="Zaregistrovat">Zaregistrovat</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#" aria="Přihlásit">Přihlásit</a>
-                        </li>
+                            <a class="nav-link active nav-centrovani" aria-current="košik" href="kosik.html"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
+                        </li>                       
                     </ul>
                 </div>
             </div>
         </div>
     </nav>
-            <section class="main-section">
-                <div class="flex-shrink-0 p-3" style="width: 280px;"> 
-                    <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"> 
-                        <span class="fs-5 fw-semibold">Menu</span> 
-                    </a> 
-                    <ul class="list-unstyled ps-0"> 
-                        <li class="mb-1"> 
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">Motorky</button> 
-                            <div class="collapse show" id="home-collapse"> 
-                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li>  
-                                </ul> 
-                            </div> 
-                        </li> 
-                        <li class="mb-1"> 
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">Skútry</button> 
-                            <div class="collapse" id="dashboard-collapse"> 
-                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li> 
-                                </ul> 
-                            </div> 
-                        </li> 
-                        <li class="mb-1"> 
-                            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">Helmy</button> 
-                            <div class="collapse" id="orders-collapse"> 
-                                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">S</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">M</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">L</a></li> 
-                                    <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">XL</a></li> 
-                                </ul> 
-                            </div> 
-                        </li> 
-                        <li class="border-top my-3"></li> 
-                    </ul> 
-                </div>
-            </section>        
+
+    <section class="main-section">
+        <div class="sidebar flex-shrink-0 p-3" style="width: 280px;"> 
+            <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"> 
+                <span class="fs-5 fw-semibold">Menu</span> 
+            </a> 
+            <ul class="list-unstyled ps-0"> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="false">Motorky</button> 
+                    <div class="collapse" id="home-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li>  
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="false">Skútry</button> 
+                    <div class="collapse" id="dashboard-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li> 
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">Helmy</button> 
+                    <div class="collapse" id="orders-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">S</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">M</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">L</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">XL</a></li> 
+                        </ul> 
+                    </div> 
+                </li> 
+                <li class="border-top my-3"></li> 
+                <li class="mb-1"> 
+                    <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#ucet-collapse" aria-expanded="false"><b>Váš účet</button> 
+                    <div class="collapse" id="ucet-collapse"> 
+                        <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small"> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Přihlásit se</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Registrovat se</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Můj profil</a></li> 
+                            <li><a href="#" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Moje objednávky</a></li>  
+                        </ul> 
+                    </div> 
+                </li> 
+            </ul> 
         </div>
-    </nav>
+    </section>
 </body>    
