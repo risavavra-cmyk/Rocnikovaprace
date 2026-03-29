@@ -1,5 +1,5 @@
 :root {
-    --primary-color: rgb(238, 164, 25);
+    --primary-color: rgb(255, 193, 7);
 }
 
 *{
@@ -41,6 +41,10 @@ body{
     min-width: 250px;
     margin-right: 10px;
 }
+.search-tlacitko{
+    cursor: pointer;
+    margin: -1px;
+}
 
 .navbar .menu-bar ul{
     display: flex;
@@ -60,10 +64,6 @@ body{
 .logo{
     height: 40px;
     margin: 5px 10px;
-}
-
-.fa-search{
-    color: #fff;
 }
 
 .nav-centrovani{
@@ -192,8 +192,9 @@ body{
     }
 }
 .title-box{    
+    position: relative;
     width: 180px;
-    padding: 0px 10px;
+    padding: 4px 10px;
     height: 40px;
     margin-bottom: 30px;
     background-color: var(--primary-color);
@@ -207,7 +208,7 @@ body{
     border-right: 50px solid transparent;
     position: absolute;
     display: flex;
-    
+    top: 0;
     margin-left: 170px;
 }
 
@@ -300,4 +301,28 @@ body{
 }
 .thumbnail:hover, .thumbnail.active {
     opacity: 1;
+}
+.produkt-popis{
+    margin-top: 20px;
+    padding: 20px;   
+    box-shadow: 1px 1px 4px 1px var(--primary-color);
+}
+
+.produkt-ochraniceni{    
+    position: relative;
+    width: 180px;
+    padding: 6px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);    
+    font-size: 22px;
+}
+.produkt-ochraniceni::after{
+    content: '';
+    border-top: 40px solid var(--primary-color);
+    border-right: 50px solid transparent;
+    position: absolute;
+    display: flex;
+    top: 0;
+    margin-left: 170px;
 }
