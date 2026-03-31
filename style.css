@@ -330,3 +330,7 @@ footer{
     top: 0;
     margin-left: 170px;
 }
+
+.button-produkt{
+    opacity: 0.5;
+}
