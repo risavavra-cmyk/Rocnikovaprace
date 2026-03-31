@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
@@ -36,7 +35,7 @@
             <div class="col-md-6 mb-4">
                 <img src="images/motorky1.jpg" alt="Product" class="img-fluid rounded mb-3 product-image" id="mainImage">
                 <div class="d-flex justify-content-between">
-                    <img src="images/motorky1.jpg" alt="Thumbnail 1" class="thumbnail rounded active" onclick="changeImage(event, this.src)">
+                    <img src="images/motorky1.jpg" alt="Thumbnail 1" class="thumbnail rounded active"  onclick="changeImage(event, this.src)">
                     <img src="images/motorky2.jpg" alt="Thumbnail 2" class="thumbnail rounded" onclick="changeImage(event, this.src)">
                     <img src="images/motorky3.jpg" alt="Thumbnail 3" class="thumbnail rounded" onclick="changeImage(event, this.src)">
                     <img src="images/motorky4.jpg" alt="Thumbnail 4" class="thumbnail rounded" onclick="changeImage(event, this.src)">
@@ -49,14 +48,7 @@
                 <div class="mb-3">
                     <span class="h4 me-2">80 000 Kč</span>
                 </div>
-                <div class="mb-3">
-                    <i class="fa fa-star text-warning"></i>
-                    <i class="fa fa-star text-warning"></i>
-                    <i class="fa fa-star text-warning"></i>
-                    <i class="fa fa-star text-warning"></i>
-                    <i class="fa fa-star-half-o text-warning"></i>
-                    <span class="ms-2">4.5</span>
-                </div>
+                
                 <p class="mb-4">Popis motorky xyz - tato motorka je ideální pro každodenní použití a zároveň poskytuje výkonnost potřebnou pro náročnější jízdy. bla bla</p>
                 
                 <div class="mb-4">
@@ -81,29 +73,15 @@
             </div>
         </div>
         <section>
-        <div class="produkt-popis">
-            <h6 class="produkt-ochraniceni">Popis produktu</h6>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <div class="produkt-popis">
+                <h6 class="produkt-ochraniceni">Popis produktu</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
-        </div>
+            </div>
         </section>
-    </section>
-    
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        function changeImage(event, src) {
-                document.getElementById('mainImage').src = src;
-                document.querySelectorAll('.thumbnail').forEach(thumb => thumb.classList.remove('active'));
-                event.target.classList.add('active');
-            }
-    </script>
-    
-    
-    
-    <div class="container"> 
+    </section>    
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
             <div class="col-md-4 d-flex align-items-center"> 
                 <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
@@ -124,6 +102,10 @@
                 </li> 
             </ul> 
         </footer> 
-    </div>
+    
 </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripty.js"></script>
+</html>
     

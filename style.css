@@ -286,6 +286,10 @@ body{
 .footer-posunuti img{
     margin-top: -2px;
 }
+footer{
+    top: 0;
+    left: 0;
+}
 
 .product-image {
     max-height: 400px;
