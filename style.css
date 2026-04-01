@@ -17,6 +17,10 @@
         margin-right: 0;
         margin-bottom: 8px;
     }
+    .menu-bar{
+        flex: 1 1 35%;
+        justify-content: flex-end;
+    }
     .sidebar{
         position: static;
         height: auto;
@@ -38,6 +42,12 @@
         margin-left: 0;
         padding: 0 10px;
         width: 100%;
+    }
+    .featured{
+        margin-left: 0;
+    }
+    .sale{
+        margin-left: 0;
     }
 }
 :root {
@@ -157,7 +167,7 @@ body{
 }
 .main-section{
     display: flex;
-    margin-left: 0;
+    margin-left: 280px;
 }
 .slider{
     flex: 1;
