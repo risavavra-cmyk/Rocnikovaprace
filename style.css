@@ -4,16 +4,19 @@
     }
     .navbar{
         position: static;
-      
+        margin-left: 0 !important;
+        width: 100%;
     }
     .navbar .container-fluid{
-        flex-wrap: nowrap;
+        flex-wrap:nowrap !important;
+        justify-content: space-between !important;
+        gap: 5px;
     }
-    .navbar form{
-        flex: 1 1 60%;
-        min-width: 160px;
-        margin-right: 0;
-        margin-bottom: 8px;
+    .navbar-content form{
+        flex: 1;
+        min-width: 50px !important;
+        margin-right: 5px !important;
+        margin-bottom: 0 !important;
     }
     .sidebar{
         position: relative;
@@ -112,15 +115,6 @@ body{
 .search-tlacitko{
     cursor: pointer;
     margin: -1px;
-}
-
-.navbar .menu-bar ul{
-    display: flex;
-    align-items: center;
-}
-
-.navbar .menu-bar .nav-item {
-    margin-left: 10px;
 }
 
 .navbar .nav-link {
