@@ -257,7 +257,7 @@ body{
 .product-top{
     position: relative;
 }
-.overlay-right{
+.overlay-left{
     display: block;
     opacity: 0;
     position: absolute;
@@ -266,7 +266,7 @@ body{
     width: 70px;
 }
 
-.overlay-right .fa-solid{
+.overlay-left .fa-solid{
     cursor: pointer;
     background-color: var(--primary-color);
     color: #000;
@@ -278,12 +278,12 @@ body{
     margin-bottom: 5%;
 }
 
-.overlay-right .btn-secondary{
+.overlay-left .btn-secondary{
     background: none !important;
     border: none !important;
     box-shadow: none !important;
 }
-.product-top:hover .overlay-right{
+.product-top:hover .overlay-left{
     opacity: 1;
     transition: 0.5s;
     margin-left: 4%;
