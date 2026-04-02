@@ -4,6 +4,7 @@
     }
     .navbar{
         position: static;
+      
     }
     .navbar .container-fluid{
         flex-wrap: nowrap;
@@ -48,13 +49,7 @@
         width: 100%;
     }
 }
-.sidebar{
-    background-color: white;
-    z-index: 100;
-    padding: 20px;
-    top: 57px;
-    left: 0;
-}
+
 
 @media (min-width: 992px) {
     .sidebar {
@@ -62,7 +57,7 @@
         top: 57px;
         left: 0;
         width: 280px;
-        height: 100vh;
+        height: calc(100vh - 141px);
         z-index: 100;
     }
 
@@ -85,8 +80,6 @@ body{
     padding-top: 57px;
 }
 
-
-
 .navbar{
     position: fixed;
     top: 0;
@@ -108,7 +101,7 @@ body{
     align-items: center;
     justify-content: space-between;
     flex: 1;
-    gap: 10px;
+    
 }
 
 .navbar form{
@@ -170,16 +163,22 @@ body{
     margin-right: 5px
 }
 
-
+.sidebar{
+    background-color: white;
+    z-index: 100;
+    padding: 20px;
+    top: 57px;
+    left: 0;
+}
 .sidebar-item-posunuti{
     margin-left: 20px;
 }
 .sidebar-menu-text{
     margin-left: 10px;
 }
+
 .main-section{
-    display: flex;
-    
+    display: flex;  
 }
 
 .obsah{
