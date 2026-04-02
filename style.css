@@ -1,4 +1,4 @@
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 991px) {
     body{
         padding-top: 0;
     }
@@ -6,9 +6,6 @@
         position: static;
     }
     .navbar .container-fluid{
-        flex-wrap: wrap;
-    }
-    .navbar .navbar-collapse{
         flex-wrap: nowrap;
     }
     .navbar form{
@@ -17,15 +14,11 @@
         margin-right: 0;
         margin-bottom: 8px;
     }
-    .menu-bar{
-        flex: 1 1 35%;
-        justify-content: flex-end;
-    }
     .sidebar{
-        position: static;
+        position: relative;
         height: auto;
         width: 100%;
-        margin-top: 55px;
+        margin-bottom: 20px;
     }
     .main-section{
         display: block;
@@ -49,7 +42,35 @@
     .sale{
         margin-left: 0;
     }
+    .obsah{
+        margin-left: 0 !important;
+        padding: 10px;
+        width: 100%;
+    }
 }
+.sidebar{
+    background-color: white;
+    z-index: 100;
+    padding: 20px;
+    top: 57px;
+    left: 0;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        position: fixed;
+        top: 57px;
+        left: 0;
+        width: 280px;
+        height: 100vh;
+        z-index: 100;
+    }
+
+    .obsah {
+        margin-left: 280px;
+    }
+}
+
 :root {
     --primary-color: rgb(255, 193, 7);
 }
@@ -149,16 +170,7 @@ body{
     margin-right: 5px
 }
 
-.sidebar{
-    position: fixed;
-    left: 0;
-    top: 57px;
-    height: calc(100vh - 141px);
-    width: 280px;
-    background-color: white;
-    z-index: 10;
-    overflow-y: auto;
-}
+
 .sidebar-item-posunuti{
     margin-left: 20px;
 }
@@ -167,12 +179,17 @@ body{
 }
 .main-section{
     display: flex;
+    
+}
+
+.obsah{
     margin-left: 280px;
+    padding: 20px;
+    transition: margin-left 0.3s;
 }
 .slider{
     flex: 1;
     padding: 0 10px;
-    padding-left: 280px;
     margin: 0px 25px;
     
 }
@@ -198,7 +215,6 @@ body{
     margin-left: 0;
     flex: 1;
     padding: 0 10px;
-    padding-left: 280px;
     margin: 0px 25px;
     width: 83.1%;
 }
@@ -216,7 +232,6 @@ body{
     margin-left: 0;
     flex: 1;
     padding: 0 10px;
-    padding-left: 280px;
     margin: 0px 25px;   
     width: 83.1%;
 }
@@ -299,7 +314,6 @@ body{
     margin: 60px 0;
     flex: 1;
     padding: 0 10px;
-    padding-left: 280px;
     margin: 0px 25px;
     width: 83.1%;
 }
