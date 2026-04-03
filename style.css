@@ -256,32 +256,37 @@ body{
 }
 .product-top{
     position: relative;
+    container-type: inline-size;
 }
 .overlay-left{
-    display: block;
+    display: flex;
     opacity: 0;
     position: absolute;
     top: 10%;
     margin-left: 0;
-    width: 70px;
+    gap: 1.5cqw;
+    flex-direction: column;
+    width: fit-content;
 }
 
 .overlay-left .fa-solid{
     cursor: pointer;
     background-color: var(--primary-color);
     color: #000;
-    height: 35px;
-    width: 35px;
-    font-size: 20px;
-    padding: 7px;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    height: 12cqw;
+    width: 12cqw;
+    font-size: 6cqw;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .overlay-left .btn-secondary{
     background: none !important;
     border: none !important;
     box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
 }
 .product-top:hover .overlay-left{
     opacity: 1;
@@ -329,8 +334,9 @@ body{
     margin-top: -2px;
 }
 footer{
-    top: 0;
+    bottom: 0;
     left: 0;
+    
 }
 
 .product-image {
@@ -352,6 +358,7 @@ footer{
     margin-top: 20px;
     padding: 20px;   
     box-shadow: 1px 1px 4px 1px var(--primary-color);
+    margin-bottom: 10px;
 }
 
 .produkt-ochraniceni{    
