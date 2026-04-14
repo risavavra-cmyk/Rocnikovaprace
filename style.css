@@ -89,7 +89,6 @@ body{
     top: 0;
     width: 100%;
     z-index: 10;
-    background-color: white;
 }
 
 .navbar .container-fluid{
@@ -145,7 +144,6 @@ body{
 
 .kosik ul li{
     list-style-type: none;
-    border-left: 1px solid #fff;
     padding: 15px 35px;
     text-align: center;
 }
@@ -340,7 +338,7 @@ footer{
     
 }
 
-.product-image {
+.produkt-image {
     max-height: 400px;
     object-fit: cover;
 }
