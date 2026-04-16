@@ -34,3 +34,42 @@ function updateMainImage() {
         }
     });
 }
+
+function formatPrice(price) {
+            return new Intl.NumberFormat('cs-CZ', {
+                style: 'currency',
+                currency: 'CZK',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(price);
+        }
+
+        function updateCartPrices() {
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            let totalPrice = 0;
+
+            quantityInputs.forEach(input => {
+                const cartRow = input.closest('.cart-item-row');
+                const quantity = parseInt(input.value) || 1;
+                const unitPrice = parseInt(input.dataset.unitPrice) || 0;
+                const itemTotal = quantity * unitPrice;
+                
+                // Aktualizuj cenu položky
+                const priceElement = cartRow.querySelector('.item-price');
+                if (priceElement) {
+                    priceElement.textContent = formatPrice(itemTotal);
+                }
+                
+                totalPrice += itemTotal;
+            });
+
+            // Aktualizuj mezisoučet a součet
+            document.getElementById('subtotal').textContent = formatPrice(totalPrice);
+            document.getElementById('total').textContent = formatPrice(totalPrice);
+        }
+
+        // Přidej event listenery na všechny quantity inputy
+        document.querySelectorAll('.quantity-input').forEach(input => {
+            input.addEventListener('change', updateCartPrices);
+            input.addEventListener('input', updateCartPrices);
+        });
