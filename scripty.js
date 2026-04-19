@@ -47,29 +47,137 @@ function formatPrice(price) {
         function updateCartPrices() {
             const quantityInputs = document.querySelectorAll('.quantity-input');
             let totalPrice = 0;
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
             quantityInputs.forEach(input => {
-                const cartRow = input.closest('.cart-item-row');
                 const quantity = parseInt(input.value) || 1;
                 const unitPrice = parseInt(input.dataset.unitPrice) || 0;
                 const itemTotal = quantity * unitPrice;
                 
                 // Aktualizuj cenu položky
-                const priceElement = cartRow.querySelector('.item-price');
+                const priceElement = input.closest('.cart-item-row').querySelector('.item-price');
                 if (priceElement) {
                     priceElement.textContent = formatPrice(itemTotal);
                 }
                 
+                // Aktualizuj množství v localStorage
+                const productId = parseInt(input.closest('.cart-item-row').dataset.itemId);
+                const productIndex = cart.findIndex(p => p.id === productId);
+                if (productIndex !== -1) {
+                    cart[productIndex].quantity = quantity;
+                }
+                
                 totalPrice += itemTotal;
             });
+
+            // Ulož aktualizovaný košík zpět do localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
 
             // Aktualizuj mezisoučet a součet
             document.getElementById('subtotal').textContent = formatPrice(totalPrice);
             document.getElementById('total').textContent = formatPrice(totalPrice);
         }
 
-        // Přidej event listenery na všechny quantity inputy
-        document.querySelectorAll('.quantity-input').forEach(input => {
-            input.addEventListener('change', updateCartPrices);
-            input.addEventListener('input', updateCartPrices);
-        });
+        // Funkce pro přidávání produktu do košíku
+        function addToCart(image, name, code, price) {
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            
+            // Vytvoř objekt produktu
+            const product = {
+                id: Date.now(), // Unikátní ID
+                image: image,
+                name: name,
+                code: code,
+                price: price,
+                quantity: quantity
+            };
+            
+            // Získej existující košík z localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Přidej produkt do košíku
+            cart.push(product);
+            
+            // Ulož zpět do localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Přesměruj na košík
+            window.location.href = 'kosik.html';
+        }
+
+        // Funkce pro mazání položek z košíku
+        function deleteCartItem(button, productId) {
+            // Získej košík z localStorage
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Odstraň produkt s daným ID
+            cart = cart.filter(product => product.id !== productId);
+            
+            // Ulož zpět do localStorage
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
+            // Znovu načti košík
+            loadCartFromStorage();
+        }
+
+        // Zavolej loadCartFromStorage při načtení stránky
+        window.addEventListener('DOMContentLoaded', loadCartFromStorage);
+
+        // Funkce pro načítání produktů z localStorage a vykreslení v košíku
+        function loadCartFromStorage() {
+            const cartContainer = document.getElementById('cartContainer');
+            if (!cartContainer) return; // Nejsme na kosik.html
+            
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // Vyčisti obsah
+            cartContainer.innerHTML = '';
+            
+            if (cart.length === 0) {
+                // Košík je prázdný
+                const emptyMessage = document.createElement('div');
+                emptyMessage.id = 'emptyCartMessage';
+                emptyMessage.className = 'text-center py-5';
+                emptyMessage.innerHTML = '<h5 class="text-muted">Košík je prázdný</h5>';
+                cartContainer.appendChild(emptyMessage);
+                return;
+            }
+            
+            // Přidej produkty z localStorage
+            cart.forEach((product, index) => {
+                const itemRow = document.createElement('div');
+                itemRow.className = `d-flex justify-content-between align-items-center mb-3 cart-item-row ${index > 0 ? 'border-top pt-3' : ''}`;
+                itemRow.dataset.itemId = product.id;
+                itemRow.innerHTML = `
+                    <div class="d-flex align-items-center cart-item-row-width">
+                        <div class="col-md-3">                                   
+                            <img src="images/${product.image}" alt="${product.name}" class="img-fluid rounded kosik-img">
+                        </div>
+                        <div class="ms-4 col-md-5">
+                            <h5 class="mb-1">${product.name}</h5>
+                            <p class="text-muted mb-0">Kód produktu: ${product.code}</p>
+                        </div>    
+                    </div>
+                    <div class="col-md-2 cart-item-row-width cart-item-row-right">
+                        <label for="quantity-${product.id}" class="form-label">Množství:</label>
+                        <input type="number" class="form-control cart-item-row-width quantity-input" id="quantity-${product.id}" value="${product.quantity}" min="1" style="width: 80px;" data-unit-price="${product.price}">
+                    </div>
+                    <div class="text-end col-md-2 cart-item-row-width cart-item-row-right">
+                        <p class="h5 mb-0 fw-bold item-price">${formatPrice(product.price * product.quantity)}</p> 
+                        <button class="btn btn-sm btn-outline-danger" onclick="deleteCartItem(this, ${product.id})">
+                            <i class="fa-solid fa-trash-can"></i>
+                        </button>
+                    </div>
+                `;
+                cartContainer.appendChild(itemRow);
+            });
+            
+            // Přidej event listenery na quantity inputy
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.addEventListener('change', updateCartPrices);
+                input.addEventListener('input', updateCartPrices);
+            });
+            
+            // Aktualizuj ceny
+            updateCartPrices();
+        }
