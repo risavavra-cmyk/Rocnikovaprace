@@ -79,8 +79,11 @@ function formatPrice(price) {
         }
 
         // Funkce pro přidávání produktu do košíku
-        function addToCart(image, name, code, price) {
-            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+        function addToCart(image, name, code, price, quantity) {
+            // Pokud není quantity předáno, zkus najít z input pole (pro motorka1.html)
+            if (quantity === undefined) {
+                quantity = parseInt(document.getElementById('quantity').value) || 1;
+            }
             
             // Vytvoř objekt produktu
             const product = {

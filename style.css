@@ -113,8 +113,8 @@
         top: 57px;
         left: 0;
         width: 280px;
-        height: calc(100vh - 141px);
-        z-index: 100;
+        height: calc(100vh - 159px);
+        z-index: 10;
     }
 
     .obsah {
@@ -128,7 +128,7 @@
     padding: 0;    
 }
 body{
-    background-color: #f1f3f4;
+    background-color: white;
     font-family: sans-serif;
     padding-top: 57px;
 }
@@ -206,10 +206,9 @@ body{
 }
 
 .sidebar{
-    background-color: white;
-    z-index: 100;
+    z-index: 10;
     padding: 20px;
-    top: 57px;
+    top: 76px;
     left: 0;
 }
 .sidebar-item-posunuti{
@@ -342,7 +341,7 @@ body{
     margin-left: 4%;
 }
 .product-bottom .fa{
-    color: orange;
+    color: var(--primary-color);
     font-size: 11px;
 }
 .product-bottom h3{
@@ -383,8 +382,8 @@ body{
 }
 footer{
     bottom: 0;
-    left: 0;
-    
+    left: 0; 
+    z-index: 11;  
 }
 
 .produkt-image {
@@ -435,6 +434,11 @@ footer{
 .kosik-img{
     max-width: 100px;
     height: auto;
+}
+
+/* Zajištění minimální výšky pro stránky se sidebar */
+.sidebar ~ .obsah {
+    min-height: 60vh;
 }
 
 /* Styly pro košík na desktop */

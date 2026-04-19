@@ -12,7 +12,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <div class="container-fluid">    
+    <div class="container-fluid d-flex flex-column flex-grow-1">    
         <header>   
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
                 <div class="container-fluid">
@@ -33,9 +33,9 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-grow-1">    
+        <main class="flex-grow-1 pb-5">
             <section class="main-section">
-                <div class="sidebar flex-shrink-0 p-3 bg-body-tertiary">
+                <div class="sidebar flex-shrink-0 p-3">
                     <a class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom"> 
                         <span class="sidebar-menu-text fs-5 fw-semibold">Menu</span> 
                     </a> 
@@ -47,7 +47,7 @@
                                     <li><a href="do50ccmotorky.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 50cc</a></li> 
                                     <li><a href="do125ccmotorky.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 125cc</a></li> 
                                     <li><a href="do500ccmotorky.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 500cc</a></li> 
-                                    <li><a href="do1000ccmotorky.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li>  
+                                    <li><a href="do1000ccmotorky.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">do 1000cc</a></li>
                                 </ul> 
                             </div> 
                         </li> 
@@ -88,54 +88,11 @@
                     </ul> 
                 </div> 
             </section>
-            
-            <section class="obsah">    
-                <section>
-                    <div class="slider">
-                        <div id="slider" class="carousel slide carousel-fade">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="images/motorky1.jpg" class="d-block">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/motorky2.jpg" class="d-block">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/motorky3.jpg" class="d-block">
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/helma.jpg" class="d-block">
-                                </div>
-                            </div>
-                            <div class="carousel-indicators z-1">
-                                <button type="button" data-bs-target="#slider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#slider" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#slider" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                <button type="button" data-bs-target="#slider" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="featured">
-                    <div>
-                        <div class="row">
-                            <div class="col-md-4">
-                                <img src="images/motorky1.jpg">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="images/motorky1.jpg">
-                            </div>
-                            <div class="col-md-4">
-                                <img src="images/motorky1.jpg">
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
+            <section class="obsah"> 
                 <section class="sale">
                     <div>
                         <div class="title-box d-flex">
-                            <h2>Na prodej</h2>
+                            <h2>Do 1000cc</h2>
                         </div>
                         <div class="row">
                             <div class="col-md-3">
@@ -203,37 +160,6 @@
                         </div>
                     </div>
                 </section>
-
-                <section class="web-feat">
-                    <div>
-                        <div class="row">
-                            <div class="col-md-3 feat-box">
-                                <img src="images/satisfaction100.png">
-                                <div class="feat-text">
-                                    <p><b>100% spokojenost zákazníků</b> s naší firmou</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 feat-box">
-                                <img src="images/vraceni.png">
-                                <div class="feat-text">
-                                    <p><b>Vrácení do 30 dní</b> od převezetí zboží - zdarma</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 feat-box">
-                                <img src="images/doruceni.png" class="doruceni-posunuti">
-                                <div class="feat-text">
-                                    <p><b>Doručení zdarma</b> pro každou objednávku</p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 feat-box">
-                                <img src="images/credit-card.png">
-                                <div class="feat-text">
-                                    <p><b>Platba kartou online</b></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
             </section>
         </main>
         <footer class="mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
@@ -260,4 +186,3 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripty.js"></script>
 </body>
-</html>
