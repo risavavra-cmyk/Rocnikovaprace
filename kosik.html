@@ -3,73 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-shop-kosik</title>
+    <title>MotoShop | Nákupní košík</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html"><img src="images/ikonamoto.png" alt="Ikona" class="logo" /></a>
-                <div class="navbar-content">
-                    <form class="d-flex" role="search">
-                        <input class="form-control border border-warning rounded-start-pill" type="search" placeholder="Hledat..." aria-label="Hledat"/>
-                        <span class="input-group-text bg-warning rounded-end-circle" id="addon-wrapping"><i class="fa fa-search"></i></span>
-                    </form>
-                    <div class="kosik d-flex justify-content-end ms-auto">
-                        <ul class="navbar-nav mb-2 mb-lg-0">
-                            <li class="nav-item bg-warning">
-                                <a class="nav-link active nav-centrovani" aria-current="košik" href="kosik.html"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
-                            </li>                       
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main class="flex-grow-1">
-        <section class="container py-5">
-            <h1 class="mb-4">Nákupní košík</h1>
-            <div class="row">
-                <div class="col-lg-8">
-                    <div class="card mb-4">
-                        <div class="card-body" id="cartContainer">
-                            <!-- Produkty se načtou z localStorage -->
-                        </div>
-                    </div>     
-                </div>
-                
-                
-                <div class="col-lg-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Souhrn objednávky</h5>
-                            <div class="d-flex justify-content-between mb-3">
-                                <span>Mezisoučet</span>
-                                <span id="subtotal">150 000 Kč</span>
-                            </div>
-                            <div class="d-flex justify-content-between mb-3">
-                                <span>Doprava</span>
-                                <span>0 Kč</span>
-                            </div>
-                            <div class="d-flex justify-content-between mb-3 border-top">
-                                <span class="fw-bold">Součet</span>
-                                <span class="fw-bold" id="total">150 000 Kč</span>
-                            </div>
-                            <a href="#" class="btn btn-warning w-100">Přejít k platbě</a>
+    <div class="container-fluid">
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html"><img src="images/ikonamoto.png" alt="Ikona" class="logo" /></a>
+                    <div class="navbar-content">
+                        <form class="d-flex" role="search">
+                            <input class="form-control border border-warning rounded-start-pill" type="search" placeholder="Hledat..." aria-label="Hledat"/>
+                            <span class="input-group-text bg-warning rounded-end-circle" id="addon-wrapping"><i class="fa fa-search"></i></span>
+                        </form>
+                        <div class="kosik d-flex justify-content-end ms-auto">
+                            <ul class="navbar-nav mb-2 mb-lg-0">
+                                <li class="nav-item bg-warning">
+                                    <a class="nav-link active nav-centrovani" aria-current="košik" href="kosik.html"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
+                                </li>                       
+                            </ul>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-start mb-3">
-                <a href="#" class="btn btn-warning"><i class="far fa-arrow-alt-circle-left me-2"></i>Pokračovat v nákupu</a>
-            </div>
-        </section>
-    </main>
-    <footer class="mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"> 
+            </nav>
+        </header>
+        <main class="flex-grow-1">
+            <section class="container py-5">
+                <h1 class="mb-4">Nákupní košík</h1>
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card mb-4">
+                            <div class="card-body" id="cartContainer">
+                                <!-- Produkty se načtou z localStorage -->
+                            </div>
+                        </div>     
+                    </div>
+                    
+                    
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Souhrn objednávky</h5>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span>Mezisoučet</span>
+                                    <span id="subtotal">150 000 Kč</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span>Doprava</span>
+                                    <span>0 Kč</span>
+                                </div>
+                                <div class="d-flex justify-content-between mb-3 border-top">
+                                    <span class="fw-bold">Součet</span>
+                                    <span class="fw-bold" id="total">150 000 Kč</span>
+                                </div>
+                                <a href="#" class="btn btn-warning w-100">Přejít k platbě</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-start mb-3">
+                    <a href="index.html" class="btn btn-warning"><i class="far fa-arrow-alt-circle-left me-2"></i>Pokračovat v nákupu</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 border-top"> 
             <div class="col-md-4 d-flex align-items-center"> 
                 <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
                     <img src="images/ikonamoto.png" width="50" height="24" alt="Logo" aria-hidden="true">
