@@ -283,22 +283,36 @@ body{
 .title-box{    
     position: relative;
     width: fit-content;
-    padding: 4px 10px;
+    min-width: 180px;
+    padding: 4px 20px 4px 10px;
     height: 40px;
     margin-bottom: 30px;
     background-color: var(--primary-color);
+    white-space: nowrap;
 }
 .title-box h2{
     font-size: 24px;
 }
-.title-box::after{
+.title-box::after, .produkt-ohraniceni::after{
     content: '';
     border-top: 40px solid var(--primary-color);
     border-right: 50px solid transparent;
     position: absolute;
     display: flex;
     top: 0;
-    margin-left: 170px;
+    left: 100%;
+    margin-left: 0;
+}
+.produkt-ohraniceni{    
+    position: relative;
+    width: fit-content;
+    min-width: 180px;
+    padding: 4px 20px 4px 10px;
+    height: 40px;
+    margin-bottom: 30px;
+    background-color: var(--primary-color);
+    white-space: nowrap;  
+    font-size: 22px;
 }
 
 .product-top img{
@@ -413,24 +427,6 @@ footer{
     margin-bottom: 10px;
 }
 
-.produkt-ochraniceni{    
-    position: relative;
-    width: 180px;
-    padding: 6px 10px;
-    height: 40px;
-    margin-bottom: 30px;
-    background-color: var(--primary-color);    
-    font-size: 22px;
-}
-.produkt-ochraniceni::after{
-    content: '';
-    border-top: 40px solid var(--primary-color);
-    border-right: 50px solid transparent;
-    position: absolute;
-    display: flex;
-    top: 0;
-    margin-left: 170px;
-}
 
 .button-produkt{
     opacity: 0.5;
