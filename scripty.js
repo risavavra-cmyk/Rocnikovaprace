@@ -1,11 +1,15 @@
-const images = [
-    'images/motorky1.jpg',
-    'images/motorky2.jpg',
-    'images/motorky3.jpg',
-    'images/motorky4.jpg'
-];
+let images = [];
 
 let currentIndex = 0;
+
+// Inicializuj images pole ze thumbnail obrázků na stránce
+function initImages() {
+    images = Array.from(document.querySelectorAll('.thumbnail')).map(thumb => thumb.src);
+    currentIndex = 0;
+}
+
+// Zavolej initImages při načtení stránky
+window.addEventListener('DOMContentLoaded', initImages);
 
 function changeImage(event, src) {
     document.getElementById('mainImage').src = src;
