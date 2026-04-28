@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motorka 1</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <header>    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html"><img src="images/ikonamoto.png" alt="Ikona" class="logo" /></a>
+                <div class="navbar-content">
+                    <form class="d-flex" role="search">
+                        <input class="form-control border border-warning rounded-start-pill" type="search" placeholder="Hledat..." aria-label="Hledat"/>
+                        <span class="input-group-text bg-warning rounded-end-circle search-tlacitko" id="addon-wrapping"><i class="fa fa-search"></i></span>
+                    </form>
+                    <div class="kosik d-flex justify-content-end ms-auto">
+                        <ul class="navbar-nav mb-2 mb-lg-0">
+                            <li class="nav-item bg-warning">
+                                <a class="nav-link active nav-centrovani" aria-current="košik" href="kosik.html"><i class="fa-solid fa-basket-shopping"></i>Košík</a>
+                            </li>                       
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="flex-grow-1">
+        <section class="container mt-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">               
+                    <div class="position-relative">
+                        <img src="images/HondaCBR125r1.png" class="d-block w-100 img-fluid rounded mb-3 produkt-image" alt="..." id="mainImage">
+                        <button class="btn btn-light button-produkt position-absolute top-50 start-0 translate-middle-y" onclick="prevImage()">&#10094;</button>
+                        <button class="btn btn-light button-produkt position-absolute top-50 end-0 translate-middle-y" onclick="nextImage()">&#10095;</button>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <img src="images/HondaCBR125r1.png" alt="Thumbnail 1" class="thumbnail rounded active"  onclick="changeImage(event, this.src)">
+                        <img src="images/HondaCBR125r2.png" alt="Thumbnail 2" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+                        <img src="images/HondaCBR125r3.png" alt="Thumbnail 3" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+                        <img src="images/HondaCBR125r4.png" alt="Thumbnail 4" class="thumbnail rounded" onclick="changeImage(event, this.src)">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h2 class="mb-3">Honda CBR 500R</h2>
+                    <p class="text-muted mb-4">Kód produktu: WH1000XM4</p>
+                    <div class="mb-3">
+                        <span class="h4 me-2">175 000 Kč</span>
+                    </div>
+
+                    <p class="mb-4">Popis Honda CBR 500R - tato motorka je ideální pro každodenní použití a zároveň poskytuje výkonnost potřebnou pro náročnější jízdy. bla bla</p>
+
+                    <div class="mb-4">
+                        <label for="quantity" class="form-label">Množství:</label>
+                        <input type="number" class="form-control" id="quantity" value="1" min="1" style="width: 80px;">
+                    </div>
+                    <button class="btn btn-warning btn-lg mb-3 me-2" onclick="addToCart('KawasakiNinja500.png', 'Kawasaki Ninja 500', 'WH1000XM4', 175000)">
+                        <i class="fa fa-shopping-cart"></i> Přidat do košíku
+                    </button>
+                    <div class="mt-4">
+                        <h5>Klíčové vlastnosti</h5>
+                        <ul>
+                            <li>nevim</li>
+                            <li>co </li>
+                            <li>mam</li>
+                            <li>napsat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="produkt-popis">
+                <h6 class="produkt-ohraniceni">Popis produktu</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            </div>
+        </section>
+    </main>        
+    <footer class="mt-auto d-flex flex-wrap justify-content-between align-items-center py-3 border-top"> 
+        <div class="col-md-4 d-flex align-items-center"> 
+            <a class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
+                <img src="images/ikonamoto.png" width="50" height="24" alt="Logo" aria-hidden="true">
+            </a> 
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2026 MotoShop s.r.o</span> 
+        </div> 
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex"> 
+            <li class="ms-3">
+                <a class="text-body-secondary" href="https://www.instagram.com/ricrdlak_je_/" aria-label="Instagram">
+                    <img src="images/instagramsedy.png" width="24" height="24" alt="Instagram" aria-hidden="true">
+                </a>
+            </li> 
+            <li class="ms-3">
+                <a class="text-body-secondary footer-posunuti" href="https://www.facebook.com/Risa.Ricrdlak.Vavra" aria-label="Facebook">
+                    <img src="images/facebooksedy.png" width="27" height="27" alt="Facebook" aria-hidden="true">
+                </a>
+            </li> 
+        </ul> 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripty.js"></script>
+</body>
+</html>
+    
