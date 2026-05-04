@@ -123,6 +123,11 @@
     .obsah {
         margin-left: 280px;
     }
+    .kosik-obrazek-nazev{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 }
 
 
@@ -437,12 +442,10 @@ footer{
     height: auto;
 }
 
-/* Zajištění minimální výšky pro stránky se sidebar */
 .sidebar ~ .obsah {
     min-height: 60vh;
 }
 
-/* Styly pro košík na desktop */
 .kosik-mnozstvi-cena.text-end {
     display: flex !important;
     justify-content: flex-end;
@@ -453,4 +456,14 @@ footer{
 .cena-polozky {
     margin: 0;
     text-align: right;
+}
+
+.btn-toggle .nav-arrow {
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+    margin-left: 6px; 
+}
+
+.btn-toggle[aria-expanded="true"] .nav-arrow {
+    transform: rotate(90deg); 
 }
