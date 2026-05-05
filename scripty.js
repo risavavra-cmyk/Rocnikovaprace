@@ -2,13 +2,13 @@ let images = [];
 
 let currentIndex = 0;
 
-// Inicializuj images pole ze thumbnail obrázků na stránce
+
 function initImages() {
     images = Array.from(document.querySelectorAll('.thumbnail')).map(thumb => thumb.src);
     currentIndex = 0;
 }
 
-// Zavolej initImages při načtení stránky
+
 window.addEventListener('DOMContentLoaded', initImages);
 
 function changeImage(event, src) {
@@ -58,13 +58,11 @@ function formatPrice(price) {
                 const unitPrice = parseInt(input.dataset.unitPrice) || 0;
                 const itemTotal = quantity * unitPrice;
                 
-                // Aktualizuj cenu položky
                 const priceElement = input.closest('.radek-kosiku').querySelector('.cena-polozky');
                 if (priceElement) {
                     priceElement.textContent = formatPrice(itemTotal);
                 }
                 
-                // Aktualizuj množství v localStorage
                 const productId = parseInt(input.closest('.radek-kosiku').dataset.itemId);
                 const productIndex = cart.findIndex(p => p.id === productId);
                 if (productIndex !== -1) {
@@ -74,24 +72,23 @@ function formatPrice(price) {
                 totalPrice += itemTotal;
             });
 
-            // Ulož aktualizovaný košík zpět do localStorage
+
             localStorage.setItem('cart', JSON.stringify(cart));
 
-            // Aktualizuj mezisoučet a součet
+
             document.getElementById('subtotal').textContent = formatPrice(totalPrice);
             document.getElementById('total').textContent = formatPrice(totalPrice);
         }
 
-        // Funkce pro přidávání produktu do košíku
         function addToCart(image, name, code, price, quantity) {
-            // Pokud není quantity předáno, zkus najít z input pole (pro motorka1.html)
+
             if (quantity === undefined) {
                 quantity = parseInt(document.getElementById('quantity').value) || 1;
             }
             
-            // Vytvoř objekt produktu
+
             const product = {
-                id: Date.now(), // Unikátní ID
+                id: Date.now(), 
                 image: image,
                 name: name,
                 code: code,
@@ -99,56 +96,44 @@ function formatPrice(price) {
                 quantity: quantity
             };
             
-            // Získej existující košík z localStorage
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             
-            // Přidej produkt do košíku
             cart.push(product);
             
-            // Ulož zpět do localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
             
-            // Přesměruj na košík
             window.location.href = 'kosik.html';
         }
 
-        // Funkce pro mazání položek z košíku
         function deleteCartItem(button, productId) {
-            // Získej košík z localStorage
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             
-            // Odstraň produkt s daným ID
             cart = cart.filter(product => product.id !== productId);
-            
-            // Ulož zpět do localStorage
+
             localStorage.setItem('cart', JSON.stringify(cart));
-            
-            // Znovu načti košík
+
             loadCartFromStorage();
         }
 
-        // Zavolej loadCartFromStorage při načtení stránky
         window.addEventListener('DOMContentLoaded', loadCartFromStorage);
 
-        // Funkce pro načítání produktů z localStorage a vykreslení v košíku
         function loadCartFromStorage() {
             const cartContainer = document.getElementById('cartContainer');
-            if (!cartContainer) return; // Nejsme na kosik.html
+            if (!cartContainer) return; 
             
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-            
-            // Vyčisti obsah
+h
             cartContainer.innerHTML = '';
             
             if (cart.length === 0) {
-                // Košík je prázdný
+
                 const emptyMessage = document.createElement('div');
                 emptyMessage.id = 'emptyCartMessage';
                 emptyMessage.className = 'text-center py-5';
                 emptyMessage.innerHTML = '<h5 class="text-muted">Košík je prázdný</h5>';
                 cartContainer.appendChild(emptyMessage);
             } else {
-                // Přidej produkty z localStorage
+
                 cart.forEach((product, index) => {
                     const itemRow = document.createElement('div');
                     itemRow.className = `d-flex justify-content-between align-items-center mb-3 kosik-produkt-box radek-kosiku ${index > 0 ? 'border-top pt-3' : ''}`;
@@ -176,14 +161,12 @@ function formatPrice(price) {
                     `;
                     cartContainer.appendChild(itemRow);
                 });
-                
-                // Přidej event listenery na quantity inputy
+
                 document.querySelectorAll('.vstup-mnozstvi').forEach(input => {
                     input.addEventListener('change', updateCartPrices);
                     input.addEventListener('input', updateCartPrices);
                 });
             }
-            
-            // Aktualizuj ceny (vždy, i pro prázdný košík)
+
             updateCartPrices();
         }
