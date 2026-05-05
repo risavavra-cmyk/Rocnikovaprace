@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Přihlášení uživatele</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="bg-light">
+
+    <div class="container">
+        <div class="row justify-content-center align-items-center" style="min-height: 100vh;">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="text-center mb-4">Zaregistrovat se</h3>                       
+                        <form action="#" method="POST">
+                            <div class="mb-3">
+                                <label for="emailpole" class="form-label">E-mailová adresa</label>
+                                <input type="email" class="form-control" id="emailpole" placeholder="jmeno@example.com" required>
+                            </div>                            
+                            <div class="mb-3">
+                                <label for="heslopole" class="form-label">Heslo</label>
+                                <input type="password" class="form-control" id="heslopole" placeholder="Zadejte heslo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="potvrzesheslo" class="form-label">Potvrďte heslo</label>
+                                <input type="password" class="form-control" id="potvrzesheslo" placeholder="Zadejte heslo znovu" required>
+                            </div>                          
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="pamatovatsi">
+                                <label class="form-check-label" for="pamatovatsi">Pamatovat si mě</label>
+                            </div>                         
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-warning">Zaregistrovat se</button>
+                            </div>
+                        </form> 
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmxc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -404,7 +404,7 @@ body{
     margin-top: -2px;
 }
 footer{
-    margin-bottom: 0 !important; /* Zruší případný spodní okraj */
+    margin-bottom: 0 !important;
     position: relative;
     z-index: 100;
     width: 100%;
