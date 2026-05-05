@@ -122,7 +122,7 @@ function formatPrice(price) {
             if (!cartContainer) return; 
             
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
-h
+
             cartContainer.innerHTML = '';
             
             if (cart.length === 0) {
