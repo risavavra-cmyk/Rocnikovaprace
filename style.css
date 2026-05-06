@@ -1,8 +1,16 @@
 :root {
     --primary-color: rgb(255, 193, 7);
 }
-
+@media (max-width: 1199.98px) {
+    
+}
 @media only screen and (max-width: 991px) {
+    .tlacitko-zpet {
+        position: static; 
+        display:inline-block;
+        text-align: center; 
+        margin-top: 2rem;
+    }
     body{
         padding-top: 0;
     }
@@ -127,6 +135,11 @@
         display: flex;
         align-items: center;
         gap: 10px;
+    }
+    .tlacitko-zpet {
+        position: absolute;
+        top: 80px;
+        left: 20px;
     }
 }
 
@@ -467,3 +480,4 @@ footer{
 .btn-toggle[aria-expanded="true"] .nav-arrow {
     transform: rotate(90deg); 
 }
+
