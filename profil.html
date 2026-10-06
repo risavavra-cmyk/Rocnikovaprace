@@ -75,21 +75,38 @@
             </section>
             <div class="container pt-5">
                 <div class="row justify-content-center align-items-center">
-                    <div class="col-md-2">
-                        <img src="images/profilepic.jpg" class="img-fluid">
+                    <div class="col-md-2 d-flex flex-column align-items-center">
+                        <img src="images/profilepic.jpg" class="img-fluid mb-2" alt="Profilový obrázek">
+                            <input type="file" id="zmenaObrazku" class="d-none" accept="image/*">
+                        <label for="zmenaObrazku" class="btn btn-warning btn-sm w-100 position-relative m-0">Změnit foto<i class="fa-solid fa-pencil end-0 top-50 position-absolute translate-middle-y me-2"></i></label>
                     </div>
                     <div class="col-md-4">
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Jméno</label>
-                            <input class="form-control" type="text" value="jmeno_example" aria-label="readonly input example" readonly>
+                            <div class="input-group">
+                                <input class="form-control" type="text" value="jmeno_example" aria-label="readonly input example" readonly>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">Příjmení</label>
-                            <input class="form-control" type="text" value="prijmeni_example" aria-label="readonly input example" readonly>
+                            <div class="input-group">
+                                <input class="form-control" type="text" value="prijmeni_example" aria-label="readonly input example" readonly>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="mb-3">
                             <label for="exampleFormControlInput1" class="form-label">E-mail</label>
-                            <input class="form-control" type="email" value="jmeno@example.com" aria-label="readonly input example" readonly>
+                            <div class="input-group">
+                                <input class="form-control" type="email" value="jmeno@example.com" aria-label="readonly input example" readonly>
+                                <button class="btn btn-warning btn-sm">
+                                    <i class="fa-solid fa-pencil"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
